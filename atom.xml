@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-08T07:51:57.135Z</updated>
+  <updated>2017-05-16T02:43:10.616Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,17 +16,76 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>yilia配置</title>
+    <link href="http://yoursite.com/2017/05/16/yilia%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2017/05/16/yilia配置/</id>
+    <published>2017-05-16T02:41:53.000Z</published>
+    <updated>2017-05-16T02:43:10.616Z</updated>
+    
+    <content type="html"><![CDATA[<p>主题配置文件在主目录下的_config.yml，请根据自己需要修改使用。 完整配置例子，可以参考我的博客备份</p>
+<h1 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h1><p>menu:<br>  主页: /<br>  随笔: /tags/随笔/</p>
+<h1 id="SubNav"><a href="#SubNav" class="headerlink" title="SubNav"></a>SubNav</h1><p>subnav:<br>  github: “#”<br>  weibo: “#”<br>  rss: “#”<a id="more"></a><br>  zhihu: “#”</p>
+<p>  #qq: “#”</p>
+<p>  #weixin: “#”</p>
+<p>  #jianshu: “#”</p>
+<p>  #douban: “#”</p>
+<p>  #segmentfault: “#”</p>
+<p>  #bilibili: “#”</p>
+<p>  #acfun: “#”</p>
+<p>  #mail: “mailto:litten225@qq.com”</p>
+<p>  #facebook: “#”</p>
+<p>  #google: “#”</p>
+<p>  #twitter: “#”</p>
+<p>  #linkedin: “#”</p>
+<p>rss: /atom.xml</p>
+<h1 id="是否需要修改-root-路径"><a href="#是否需要修改-root-路径" class="headerlink" title="是否需要修改 root 路径"></a>是否需要修改 root 路径</h1><h1 id="如果您的网站存放在子目录中，例如-http-yoursite-com-blog，"><a href="#如果您的网站存放在子目录中，例如-http-yoursite-com-blog，" class="headerlink" title="如果您的网站存放在子目录中，例如 http://yoursite.com/blog，"></a>如果您的网站存放在子目录中，例如 <a href="http://yoursite.com/blog，">http://yoursite.com/blog，</a></h1><h1 id="请将您的-url-设为-http-yoursite-com-blog-并把-root-设为-blog-。"><a href="#请将您的-url-设为-http-yoursite-com-blog-并把-root-设为-blog-。" class="headerlink" title="请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。"></a>请将您的 url 设为 <a href="http://yoursite.com/blog">http://yoursite.com/blog</a> 并把 root 设为 /blog/。</h1><p>root: </p>
+<h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h1><h1 id="文章太长，截断按钮文字"><a href="#文章太长，截断按钮文字" class="headerlink" title="文章太长，截断按钮文字"></a>文章太长，截断按钮文字</h1><p>excerpt_link: more</p>
+<h1 id="文章卡片右下角常驻链接，不需要请设置为false"><a href="#文章卡片右下角常驻链接，不需要请设置为false" class="headerlink" title="文章卡片右下角常驻链接，不需要请设置为false"></a>文章卡片右下角常驻链接，不需要请设置为false</h1><p>show_all_link: ‘展开全文’</p>
+<h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><p>mathjax: false</p>
+<h1 id="是否在新窗口打开链接"><a href="#是否在新窗口打开链接" class="headerlink" title="是否在新窗口打开链接"></a>是否在新窗口打开链接</h1><p>open_in_new: false</p>
+<h1 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a>打赏</h1><h1 id="请在需要打赏的文章的md文件头部，设置属性reward-true"><a href="#请在需要打赏的文章的md文件头部，设置属性reward-true" class="headerlink" title="请在需要打赏的文章的md文件头部，设置属性reward: true"></a>请在需要打赏的文章的md文件头部，设置属性reward: true</h1><h1 id="打赏基础设定：0-关闭打赏；-1-文章对应的md文件里有reward-true属性，才有打赏；-2-所有文章均有打赏"><a href="#打赏基础设定：0-关闭打赏；-1-文章对应的md文件里有reward-true属性，才有打赏；-2-所有文章均有打赏" class="headerlink" title="打赏基础设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏"></a>打赏基础设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏</h1><p>reward_type: 2</p>
+<h1 id="打赏wording"><a href="#打赏wording" class="headerlink" title="打赏wording"></a>打赏wording</h1><p>reward_wording: ‘谢谢你请我吃糖果’</p>
+<h1 id="支付宝二维码图片地址，跟你设置头像的方式一样。比如：-assets-img-alipay-jpg"><a href="#支付宝二维码图片地址，跟你设置头像的方式一样。比如：-assets-img-alipay-jpg" class="headerlink" title="支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg"></a>支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg</h1><p>alipay: </p>
+<h1 id="微信二维码图片地址"><a href="#微信二维码图片地址" class="headerlink" title="微信二维码图片地址"></a>微信二维码图片地址</h1><p>weixin: </p>
+<h1 id="Miscellaneous"><a href="#Miscellaneous" class="headerlink" title="Miscellaneous"></a>Miscellaneous</h1><p>baidu_analytics: ‘’<br>google_analytics: ‘’<br>favicon: /favicon.png</p>
+<p>#你的头像url<br>avatar:</p>
+<p>#是否开启分享<br>share_jia: true</p>
+<p>#是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key</p>
+<p>#若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论<br>duoshuo: false</p>
+<h1 id="样式定制-一般不需要修改，除非有很强的定制欲望…"><a href="#样式定制-一般不需要修改，除非有很强的定制欲望…" class="headerlink" title="样式定制 - 一般不需要修改，除非有很强的定制欲望…"></a>样式定制 - 一般不需要修改，除非有很强的定制欲望…</h1><p>style:</p>
+<h1 id="头像上面的背景颜色"><a href="#头像上面的背景颜色" class="headerlink" title="头像上面的背景颜色"></a>头像上面的背景颜色</h1><p>  header: ‘#4d4d4d’</p>
+<h1 id="右滑板块背景"><a href="#右滑板块背景" class="headerlink" title="右滑板块背景"></a>右滑板块背景</h1><p>  slider: ‘linear-gradient(200deg,#a0cfe4,#e8c37e)’</p>
+<h1 id="slider的设置"><a href="#slider的设置" class="headerlink" title="slider的设置"></a>slider的设置</h1><p>slider:</p>
+<h1 id="是否默认展开tags板块"><a href="#是否默认展开tags板块" class="headerlink" title="是否默认展开tags板块"></a>是否默认展开tags板块</h1><p>  showTags: false</p>
+<h1 id="智能菜单"><a href="#智能菜单" class="headerlink" title="智能菜单"></a>智能菜单</h1><h1 id="如不需要，将该对应项置为false"><a href="#如不需要，将该对应项置为false" class="headerlink" title="如不需要，将该对应项置为false"></a>如不需要，将该对应项置为false</h1><h1 id="比如"><a href="#比如" class="headerlink" title="比如"></a>比如</h1><p>#smart_menu:</p>
+<h1 id="friends-false"><a href="#friends-false" class="headerlink" title="friends: false"></a>friends: false</h1><p>smart_menu:<br>  innerArchive: ‘所有文章’<br>  friends: ‘友链’<br>  aboutme: ‘关于我’</p>
+<p>friends:<br>  友情链接1: <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>  友情链接2: <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>  友情链接3: <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>  友情链接4: <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>  友情链接5: <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a><br>  友情链接6: <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
+<p>aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;主题配置文件在主目录下的_config.yml，请根据自己需要修改使用。 完整配置例子，可以参考我的博客备份&lt;/p&gt;
+&lt;h1 id=&quot;Header&quot;&gt;&lt;a href=&quot;#Header&quot; class=&quot;headerlink&quot; title=&quot;Header&quot;&gt;&lt;/a&gt;Header&lt;/h1&gt;&lt;p&gt;menu:&lt;br&gt;  主页: /&lt;br&gt;  随笔: /tags/随笔/&lt;/p&gt;
+&lt;h1 id=&quot;SubNav&quot;&gt;&lt;a href=&quot;#SubNav&quot; class=&quot;headerlink&quot; title=&quot;SubNav&quot;&gt;&lt;/a&gt;SubNav&lt;/h1&gt;&lt;p&gt;subnav:&lt;br&gt;  github: “#”&lt;br&gt;  weibo: “#”&lt;br&gt;  rss: “#”
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Es6新特性</title>
     <link href="http://yoursite.com/2017/05/08/Es6%E6%96%B0%E7%89%B9%E6%80%A7/"/>
     <id>http://yoursite.com/2017/05/08/Es6新特性/</id>
     <published>2017-05-08T07:36:32.000Z</published>
-    <updated>2017-05-08T07:51:57.135Z</updated>
+    <updated>2017-05-16T02:26:26.842Z</updated>
     
     <content type="html"><![CDATA[<p>####ECMAScript 6简介</p>
 <p>###1.Class基本语法</p>
 <p>##概述<br>JavaScript语言的传统方法是通过构造函数，定义并生成新对象。下面是一个例子。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Point</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.x = x;</div><div class="line">  <span class="keyword">this</span>.y = y;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Point.prototype.toString = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">'('</span> + <span class="keyword">this</span>.x + <span class="string">', '</span> + <span class="keyword">this</span>.y + <span class="string">')'</span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Point(<span class="number">1</span>, <span class="number">2</span>);</div></pre></td></tr></table></figure></p>
 <p>上面这种写法跟传统的面向对象语言（比如C++和Java）差异很大，很容易让新学习这门语言的程序员感到困惑。</p>
-<p>ES6提供了更接近传统语言的写法，引入了Class（类）这个概念，作为对象的模板。通过class关键字，可以定义类。基本上，ES6的class可以看作只是一个语法糖，它的绝大部分功能，ES5都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。上面的代码用ES6的“类”改写，就是下面这样。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//定义类</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(x, y) &#123;</div><div class="line">    <span class="keyword">this</span>.x = x;</div><div class="line">    <span class="keyword">this</span>.y = y;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  toString() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'('</span> + <span class="keyword">this</span>.x + <span class="string">', '</span> + <span class="keyword">this</span>.y + <span class="string">')'</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>ES6提供了更接近传统语言的写法，引入了Class（类）这个概念，作为对象的模板。通过class关键字，可以定义类。基本上，ES6的class可以看作只是一个语法糖，它的绝大部分功能，ES5都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。上面的代码用ES6的“类”改写，就是下面这样。<a id="more"></a><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//定义类</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(x, y) &#123;</div><div class="line">    <span class="keyword">this</span>.x = x;</div><div class="line">    <span class="keyword">this</span>.y = y;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  toString() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'('</span> + <span class="keyword">this</span>.x + <span class="string">', '</span> + <span class="keyword">this</span>.y + <span class="string">')'</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>上面代码定义了一个“类”，可以看到里面有一个constructor方法，这就是构造方法，而this关键字则代表实例对象。也就是说，ES5的构造函数Point，对应ES6的Point类的构造方法。</p>
 <p>Point类除了构造方法，还定义了一个toString方法。注意，定义“类”的方法的时候，前面不需要加上function这个关键字，直接把函数定义放进去了就可以了。另外，方法之间不需要逗号分隔，加了会报错。</p>
 <p>ES6的类，完全可以看作构造函数的另一种写法。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">typeof</span> Point <span class="comment">// "function"</span></div><div class="line">Point === Point.prototype.constructor <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
@@ -333,7 +392,9 @@
     
       &lt;p&gt;####ECMAScript 6简介&lt;/p&gt;
 &lt;p&gt;###1.Class基本语法&lt;/p&gt;
-&lt;p&gt;##概述&lt;br&gt;JavaScript语言的传统方法是通过构造函数，定义并生成新对象。下面是一个例子。&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table
+&lt;p&gt;##概述&lt;br&gt;JavaScript语言的传统方法是通过构造函数，定义并生成新对象。下面是一个例子。&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Point&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;x, y&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.x = x;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.y = y;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;Point.prototype.toString = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; (&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;(&#39;&lt;/span&gt; + &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.x + &lt;span class=&quot;string&quot;&gt;&#39;, &#39;&lt;/span&gt; + &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.y + &lt;span class=&quot;string&quot;&gt;&#39;)&#39;&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; p = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Point(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;上面这种写法跟传统的面向对象语言（比如C++和Java）差异很大，很容易让新学习这门语言的程序员感到困惑。&lt;/p&gt;
+&lt;p&gt;ES6提供了更接近传统语言的写法，引入了Class（类）这个概念，作为对象的模板。通过class关键字，可以定义类。基本上，ES6的class可以看作只是一个语法糖，它的绝大部分功能，ES5都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。上面的代码用ES6的“类”改写，就是下面这样。
     
     </summary>
     
