@@ -159,6 +159,58 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-项目中的常见问题题-vue-store" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/16/项目中的常见问题题-vue-store/">项目中的常见问题题_vue_store</a>
+    </h1>
+  
+
+        
+        <a href="/2017/05/16/项目中的常见问题题-vue-store/" class="archive-article-date">
+  	<time datetime="2017-05-16T02:47:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我会把我做关于模仿微博的这个项目遇到的一些问题公开在这里，遇到不对的地方请指教，发送<a href="https://www.wang1348168417@gmail.com" target="_blank" rel="external">邮件wang1348168417@gmail.com</a>，或者扫我的微信二维码。<br>一个简单的状态管理</p>
+<h3 id="单一数据源"><a href="#单一数据源" class="headerlink" title="单一数据源:"></a>单一数据源:</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">const sourceOfTruth = &#123;&#125;</div><div class="line">const vmA = new Vue(&#123;</div><div class="line">  data: sourceOfTruth</div><div class="line">&#125;)</div><div class="line">const vmB = new Vue(&#123;</div><div class="line">  data: sourceOfTruth</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>每当 sourceOfTruth 发生变化, vmA 和 vmB 都会自动更新它们的视图. 子组件可以通过 this.$root.$data 访问数据. 现在我们有了单一的数据源, 但是调试会很困难. 因为无论何时数据源发生变化都会改变程序, 但是没有任何迹象表明变化发生.
+        
+          <a class="article-more-a" href="/2017/05/16/项目中的常见问题题-vue-store/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/05/16/项目中的常见问题题-vue-store/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-yilia配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
