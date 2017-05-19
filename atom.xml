@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-19T01:53:03.888Z</updated>
+  <updated>2017-05-19T02:03:38.967Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浅谈MyEclipse通过JDBC连接MySQL数据库</title>
+    <link href="http://yoursite.com/2017/05/19/%E6%B5%85%E8%B0%88MyEclipse%E9%80%9A%E8%BF%87JDBC%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://yoursite.com/2017/05/19/浅谈MyEclipse通过JDBC连接MySQL数据库/</id>
+    <published>2017-05-19T02:00:18.000Z</published>
+    <updated>2017-05-19T02:03:38.967Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.前提是MyEclipse已经能正常开发Java工程<br>2.安装MySQL<br>个人使用的是版本是 mysql-5.0.22-win32.zip<br>网址：<a href="http://www.mysql.com/downloads/mysql/#downloads" target="_blank" rel="external">http://www.mysql.com/downloads/mysql/#downloads</a><br>3.下载JDBC驱动<br>个人使用的是 mysql-connector-java-5.1.22.zip，所需要的就是解压缩之后其中的 mysql-connector-java-5.1.22-bin.jar<br>网址：<a href="http://www.mysql.com/downloads/connector/j/" target="_blank" rel="external">http://www.mysql.com/downloads/connector/j/</a><br>4.代码测试<br>复制代码 代码如下:<a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line">package ts.jsj.lyh; </div><div class="line"></div><div class="line">import java.sql.*; </div><div class="line"></div><div class="line">/** *//** </div><div class="line">* 使用JDBC连接数据库MySQL的过程 </div><div class="line">* DataBase：JSJ， table：student； </div><div class="line">* @author DuChangfeng 2008 09 18 </div><div class="line">*/ </div><div class="line">public class JDBCTest &#123; </div><div class="line"></div><div class="line">public static Connection getConnection() throws SQLException, </div><div class="line">java.lang.ClassNotFoundException </div><div class="line">&#123; </div><div class="line">//第一步：加载MySQL的JDBC的驱动 </div><div class="line">Class.forName(&quot;com.mysql.jdbc.Driver&quot;); </div><div class="line"></div><div class="line">//取得连接的url,能访问MySQL数据库的用户名,密码；jsj：数据库名 </div><div class="line">String url = &quot;jdbc:mysql://localhost:3306/jsj&quot;; </div><div class="line">String username = &quot;root&quot;; </div><div class="line">String password = &quot;111&quot;; </div><div class="line"></div><div class="line">//第二步：创建与MySQL数据库的连接类的实例 </div><div class="line">Connection con = DriverManager.getConnection(url, username, password); </div><div class="line">return con; </div><div class="line">&#125; </div><div class="line"></div><div class="line"></div><div class="line">public static void main(String args[]) &#123; </div><div class="line">try </div><div class="line">&#123; </div><div class="line">//第三步：获取连接类实例con，用con创建Statement对象类实例 sql_statement </div><div class="line">Connection con = getConnection(); </div><div class="line">Statement sql_statement = con.createStatement(); </div><div class="line"></div><div class="line">/** *//************ 对数据库进行相关操作 ************/ </div><div class="line">//如果同名数据库存在，删除 </div><div class="line">//sql_statement.executeUpdate(&quot;drop table if exists student&quot;); </div><div class="line">//执行了一个sql语句生成了一个名为student的表 </div><div class="line">//sql_statement.executeUpdate(&quot;create table student (id int not null auto_increment, name varchar(20) not null default &apos;name&apos;, math int not null default 60, primary key (id) ); &quot;); </div><div class="line">//向表中插入数据 </div><div class="line">//sql_statement.executeUpdate(&quot;insert student values(1, &apos;liying&apos;, 98)&quot;); </div><div class="line">//sql_statement.executeUpdate(&quot;insert student values(2, &apos;jiangshan&apos;, 88)&quot;); </div><div class="line">//sql_statement.executeUpdate(&quot;insert student values(3, &apos;wangjiawu&apos;, 78)&quot;); </div><div class="line">//sql_statement.executeUpdate(&quot;insert student values(4, &apos;duchangfeng&apos;, 100)&quot;); </div><div class="line">//---以上操作不实用，但是列出来作为参考--- </div><div class="line"></div><div class="line">//第四步：执行查询，用ResultSet类的对象，返回查询的结果 </div><div class="line">String query = &quot;select * from student&quot;; </div><div class="line">ResultSet result = sql_statement.executeQuery(query); </div><div class="line">/** *//************ 对数据库进行相关操作 ************/ </div><div class="line"></div><div class="line">System.out.println(&quot;Student表中的数据如下:&quot;); </div><div class="line">System.out.println(&quot;------------------------&quot;); </div><div class="line">System.out.println(&quot;学号&quot; + &quot; &quot; + &quot;姓名&quot; + &quot; &quot; + &quot;数据成绩 &quot;); </div><div class="line">System.out.println(&quot;------------------------&quot;); </div><div class="line"></div><div class="line">//对获得的查询结果进行处理，对Result类的对象进行操作 </div><div class="line">while (result.next()) </div><div class="line">&#123; </div><div class="line">int number = result.getInt(&quot;sno&quot;); </div><div class="line">String name = result.getString(&quot;sname&quot;); </div><div class="line">String mathScore = result.getString(&quot;sgrade&quot;); </div><div class="line">//取得数据库中的数据 </div><div class="line">System.out.println(&quot; &quot; + number + &quot; &quot; + name + &quot; &quot; + mathScore); </div><div class="line">&#125; </div><div class="line"></div><div class="line">//关闭连接和声明 </div><div class="line">sql_statement.close(); </div><div class="line">con.close(); </div><div class="line"></div><div class="line">&#125; catch(java.lang.ClassNotFoundException e) &#123; </div><div class="line">//加载JDBC错误,所要用的驱动没有找到 </div><div class="line">System.err.print(&quot;ClassNotFoundException&quot;); </div><div class="line">//其他错误 </div><div class="line">System.err.println(e.getMessage()); </div><div class="line">&#125; catch (SQLException ex) &#123; </div><div class="line">//显示数据库连接错误或查询错误 </div><div class="line">System.err.println(&quot;SQLException: &quot; + ex.getMessage()); </div><div class="line">&#125; </div><div class="line">&#125; </div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="以上大部分内容整理自网络，感谢猿猿们的无私奉献-具体的步骤、强大的互联网上都比较容易查询的到，这里不再赘述，现加上几点个人认为需要注意的地方："><a href="#以上大部分内容整理自网络，感谢猿猿们的无私奉献-具体的步骤、强大的互联网上都比较容易查询的到，这里不再赘述，现加上几点个人认为需要注意的地方：" class="headerlink" title="以上大部分内容整理自网络，感谢猿猿们的无私奉献~~具体的步骤、强大的互联网上都比较容易查询的到，这里不再赘述，现加上几点个人认为需要注意的地方："></a>以上大部分内容整理自网络，感谢猿猿们的无私奉献~~具体的步骤、强大的互联网上都比较容易查询的到，这里不再赘述，现加上几点个人认为需要注意的地方：</h3><ul>
+<li>1）关于mysql-connector-java-5.1.22-bin.jar 的存放位置。在MyEclipse具体的java工程中新建一存放jar 包的文件夹（如 lib），将mysql-connector-java-5.1.22-bin.jar 复制到文件夹中，选中jar包右击—&gt;Build Path—&gt;Add To Build Path，即可。 </li>
+</ul>
+<p>若出现 </p>
+<p>ClassNotFoundExceptioncom.mysql.jdbc.Driver </p>
+<p>的提示，则正是由于缺少导入jar包所造成的。 </p>
+<ul>
+<li>2）如果已经对MySQL的使用很熟悉，则可忽略这条。个人在测试连接时，老是出现这样的异常提示： </li>
+</ul>
+<p>SQLException: Communications link failure<br>The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. </p>
+<p>这正是由于个人对MySQL使用不熟悉，对MySQL进行了诸多尝试性的操作，不知何时无意中将MySQL的服务(如果在安装MySQL时没有更改的话，缺省服务名就是MySQL)关闭，解决方法开启此服务即可。控制面板—&gt;管理工具—&gt;服务—&gt;MySQL—&gt;选择启用。 </p>
+<ul>
+<li>3)在使用上面的代码测试时，需要更改的地方有：<br>//MySQL数据库的用户名,密码,数据库名<br>复制代码 代码如下:</li>
+</ul>
+<p>String url = “jdbc:mysql://localhost:3306/jsj”;<br>String username = “root”;<br>String password = “111”; </p>
+<p>以及具体基本表中的所要查询的字段名：<br>复制代码 代码如下:</p>
+<p>int number = result.getInt(“sno”);<br>String name = result.getString(“sname”);<br>String mathScore = result.getString(“sgrade”); </p>
+<p>多多分享，有问题欢迎交流~~</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1.前提是MyEclipse已经能正常开发Java工程&lt;br&gt;2.安装MySQL&lt;br&gt;个人使用的是版本是 mysql-5.0.22-win32.zip&lt;br&gt;网址：&lt;a href=&quot;http://www.mysql.com/downloads/mysql/#downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.mysql.com/downloads/mysql/#downloads&lt;/a&gt;&lt;br&gt;3.下载JDBC驱动&lt;br&gt;个人使用的是 mysql-connector-java-5.1.22.zip，所需要的就是解压缩之后其中的 mysql-connector-java-5.1.22-bin.jar&lt;br&gt;网址：&lt;a href=&quot;http://www.mysql.com/downloads/connector/j/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.mysql.com/downloads/connector/j/&lt;/a&gt;&lt;br&gt;4.代码测试&lt;br&gt;复制代码 代码如下:
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>数据库常用命令小结</title>
