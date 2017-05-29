@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Jade_Wang</title>
+  <title>浅谈Java面向对象 | Jade_Wang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jade_Wang">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="Java面向对象详解　　前言：接触项目开发也有很长一段时间了，最近开始萌发出想回过头来写写以前学过的基础知识的想法。一是原来刚开始学习接触编程，一个人跌跌撞撞摸索着往前走，初学的时候很多东西理解的也懵懵懂懂，后来实践的多了，有些东西才慢慢清楚；二是经过一定的实践之后，反过头来再去学习一些基础东西才能够理解的更透彻；三是有些东西基础但是确很重要，是值得好好搞一搞的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈Java面向对象">
+<meta property="og:url" content="http://yoursite.com/2017/05/29/浅谈Java面向对象/index.html">
 <meta property="og:site_name" content="Jade_Wang">
+<meta property="og:description" content="Java面向对象详解　　前言：接触项目开发也有很长一段时间了，最近开始萌发出想回过头来写写以前学过的基础知识的想法。一是原来刚开始学习接触编程，一个人跌跌撞撞摸索着往前走，初学的时候很多东西理解的也懵懵懂懂，后来实践的多了，有些东西才慢慢清楚；二是经过一定的实践之后，反过头来再去学习一些基础东西才能够理解的更透彻；三是有些东西基础但是确很重要，是值得好好搞一搞的。">
+<meta property="og:updated_time" content="2017-05-29T03:01:37.678Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jade_Wang">
+<meta name="twitter:title" content="浅谈Java面向对象">
+<meta name="twitter:description" content="Java面向对象详解　　前言：接触项目开发也有很长一段时间了，最近开始萌发出想回过头来写写以前学过的基础知识的想法。一是原来刚开始学习接触编程，一个人跌跌撞撞摸索着往前走，初学的时候很多东西理解的也懵懵懂懂，后来实践的多了，有些东西才慢慢清楚；二是经过一定的实践之后，反过头来再去学习一些基础东西才能够理解的更透彻；三是有些东西基础但是确很重要，是值得好好搞一搞的。">
   
     <link rel="alternative" href="/atom.xml" title="Jade_Wang" type="application/atom+xml">
   
@@ -153,38 +157,114 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Es6新特性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-浅谈Java面向对象" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/18/Es6新特性/">Es6新特性</a>
+    <h1 class="article-title" itemprop="name">
+      浅谈Java面向对象
     </h1>
   
 
         
-        <a href="/2017/04/18/Es6新特性/" class="archive-article-date">
-  	<time datetime="2017-04-18T07:36:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-18</time>
+        <a href="/2017/05/29/浅谈Java面向对象/" class="archive-article-date">
+  	<time datetime="2017-05-29T02:53:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>####ECMAScript 6简介</p>
-<p>###1.Class基本语法</p>
-<p>##概述<br>JavaScript语言的传统方法是通过构造函数，定义并生成新对象。下面是一个例子。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Point</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.x = x;</div><div class="line">  <span class="keyword">this</span>.y = y;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Point.prototype.toString = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="string">'('</span> + <span class="keyword">this</span>.x + <span class="string">', '</span> + <span class="keyword">this</span>.y + <span class="string">')'</span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Point(<span class="number">1</span>, <span class="number">2</span>);</div></pre></td></tr></table></figure></p>
-<p>上面这种写法跟传统的面向对象语言（比如C++和Java）差异很大，很容易让新学习这门语言的程序员感到困惑。</p>
-<p>ES6提供了更接近传统语言的写法，引入了Class（类）这个概念，作为对象的模板。通过class关键字，可以定义类。基本上，ES6的class可以看作只是一个语法糖，它的绝大部分功能，ES5都可以做到，新的class写法只是让对象原型的写法更加清晰、更像面向对象编程的语法而已。上面的代码用ES6的“类”改写，就是下面这样。
-        
-          <a class="article-more-a" href="/2017/04/18/Es6新特性/#more">more >></a>
-        
+        <h2 id="Java面向对象详解"><a href="#Java面向对象详解" class="headerlink" title="Java面向对象详解"></a>Java面向对象详解</h2><p>　　前言：接触项目开发也有很长一段时间了，最近开始萌发出想回过头来写写以前学过的基础知识的想法。一是原来刚开始学习接触编程，一个人跌跌撞撞摸索着往前走，初学的时候很多东西理解的也懵懵懂懂，后来实践的多了，有些东西才慢慢清楚；二是经过一定的实践之后，反过头来再去学习一些基础东西才能够理解的更透彻；三是有些东西基础但是确很重要，是值得好好搞一搞的。<a id="more"></a></p>
+<h3 id="1、面向对象"><a href="#1、面向对象" class="headerlink" title="1、面向对象"></a>1、面向对象</h3><p>　　面向对象（Object Oriented）是一种新兴的程序设计方法，或者是一种新的程序设计规范(paradigm)，其基本思想是使用对象、类、继承、封装、多态等基本概念来进行程序设计。从现实世界中客观存在的事物（即对象）出发来构造软件系统，并且在系统构造中尽可能运用人类的自然思维方式。</p>
+<h3 id="2、对象"><a href="#2、对象" class="headerlink" title="2、对象"></a>2、对象</h3><p>　　对象是系统中用来描述客观事物的一个实体，它是构成系统的一个基本单位。一个对象由一组属性和对这组属性进行操作的一组服务组成。</p>
+<p>　　类的实例化可生成对象，一个对象的生命周期包括三个阶段：生成、使用、消除。</p>
+<p>　　当不存在对一个对象的引用时，该对象成为一个无用对象。Java的垃圾收集器自动扫描对象的动态内存区，把没有引用的对象作为垃圾收集起来并释放。当系统内存用尽或调用System.gc( )要求垃圾回收时，垃圾回收线程与系统同步运行。</p>
+<h3 id="3、类"><a href="#3、类" class="headerlink" title="3、类"></a>3、类</h3><p>　　类是具有相同属性和方法的一组对象的集合，它为属于该类的所有对象提供了统一的抽象描述，其内部包括属性和方法两个主要部分。在面向对象的编程语言中，类是一个独立的程序单位，它应该有一个类名并包括属性和方法两个主要部分。</p>
+<p>　　Java中的类实现包括两个部分：类声明和类体。</p>
+<p>　　类声明</p>
+<p>1<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="string">public</span>][<span class="symbol">abstract|final</span>] class className [extends superclassName] [implements interfaceNameList]&#123;……&#125;</div></pre></td></tr></table></figure></p>
+<p>　　其中，修饰符public,abstract,final 说明了类的属性，className为类名，superclassName为类的父类的名字，interfaceNameList为类所实现的接口列表。</p>
+<p>　　类体</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">className</span></span>&#123;</div><div class="line">    [<span class="keyword">public</span> | <span class="keyword">protected</span> | <span class="keyword">private</span> ] [<span class="keyword">static</span>] [<span class="keyword">final</span>] [<span class="keyword">transient</span>] [<span class="keyword">volatile</span>] type variableName;<span class="comment">//成员变量</span></div><div class="line">    [<span class="keyword">public</span> | <span class="keyword">protected</span> | <span class="keyword">private</span> ] [<span class="keyword">static</span>] [<span class="keyword">final</span> | <span class="keyword">abstract</span>] [<span class="keyword">native</span>] [<span class="keyword">synchronized</span>] <span class="function">returnType <span class="title">methodName</span><span class="params">([paramList])</span> [<span class="keyword">throws</span> exceptionList]</span>&#123;</div><div class="line">        statements</div><div class="line">    &#125;<span class="comment">//成员方法</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>　　成员变量限定词的含义：</p>
+<ul>
+<li>static: 静态变量（类变量）</li>
+<li>final: 常量；transient: 暂时性变量，用于对象存档，用于对象的串行化</li>
+<li>volatile: 贡献变量，用于并发线程的共享<br>　　方法的实现也包括两部分内容：方法声明和方法体。</li>
+</ul>
+<h4 id="方法声明"><a href="#方法声明" class="headerlink" title="方法声明"></a>方法声明</h4><p>　　方法声明中的限定词的含义：</p>
+<ul>
+<li>static: 类方法，可通过类名直接调用</li>
+<li>abstract: 抽象方法，没有方法体</li>
+<li>final: 方法不能被重写</li>
+<li>native: 集成其它语言的代码</li>
+<li>synchronized: 控制多个并发线程的访问<br>　　方法声明包括方法名、返回类型和外部参数。其中参数的类型可以是简单数据类型，也可以是复合数据类型（又称引用数据类型）。<br>　　对于简单数据类型来说，java实现的是值传递，方法接收参数的值，但不能改变这些参数的值。如果要改变参数的值，则用引用数据类型，因为引用数据类型传递给方法的是数据在内存中的地址，方法中对数据的操作可以改变数据的值。</li>
+</ul>
+<h4 id="方法体"><a href="#方法体" class="headerlink" title="方法体"></a>方法体</h4><p>　　方法体是对方法的实现，它包括局部变量的声明以及所有合法的Java指令。方法体中声明的局部变量的作用域在该方法内部。若局部变量与类的成员变量同名，则类的成员变量被隐藏。<br>　　为了区别参数和类的成员变量，我们必须使用this。this用在一个方法中引用当前对象，它的值是调用该方法的对象。返回值须与返回类型一致，或者完全相同，或是其子类。当返回类型是接口时，返回值必须实现该接口。</p>
+<h4 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h4><p>构造方法是一个特殊的方法。Java 中的每个类都有构造方法，用来初始化该类的一个对象。<br>构造方法具有和类名相同的名称，而且不返回任何数据类型。<br>重载经常用于构造方法。<br>构造方法只能由new运算符调用</p>
+<h3 id="4、面向对象的基本特性"><a href="#4、面向对象的基本特性" class="headerlink" title="4、面向对象的基本特性"></a>4、面向对象的基本特性</h3><h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><p>　　封装性就是尽可能的隐藏对象内部细节，对外形成一道边界，只保留有限的接口和方法与外界进行交互。封装的原则是使对象以外的部分不能随意的访问和操作对象的内部属性，从而避免了外界对对象内部属性的破坏。</p>
+<p>　　可以通过对类的成员设置一定的访问权限，实现类中成员的信息隐藏。</p>
+<ul>
+<li>private：类中限定为private的成员，只能被这个类本身访问。如果一个类的构造方法声明为private,则其它类不能生成该类的一个实例。</li>
+<li>default：类中不加任何访问权限限定的成员属于缺省的（default）访问状态，可以被这个类本身和同一个包中的类所访问。</li>
+<li>protected：类中限定为protected的成员，可以被这个类本身、它的子类（包括同一个包中以及不同包中的子类）和同一个包中的所有其他的类访问。</li>
+<li>public：类中限定为public的成员，可以被所有的类访问。</li>
+</ul>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>　　子类的对象拥有父类的全部属性与方法，称作子类对父类的继承。</p>
+<ul>
+<li>Java中父类可以拥有多个子类，但是子类只能继承一个父类，称为单继承。<br>继承实现了代码的复用。</li>
+<li>Java中所有的类都是通过直接或间接地继承java.lang.Object类得到的。</li>
+<li>子类不能继承父类中访问权限为private的成员变量和方法。</li>
+<li>子类可以重写父类的方法，即命名与父类同名的成员变量。</li>
+</ul>
+<h5 id="Java中通过super来实现对父类成员的访问，super用来引用当前对象的父类。super-的使用有三种情况："><a href="#Java中通过super来实现对父类成员的访问，super用来引用当前对象的父类。super-的使用有三种情况：" class="headerlink" title="Java中通过super来实现对父类成员的访问，super用来引用当前对象的父类。super 的使用有三种情况："></a>Java中通过super来实现对父类成员的访问，super用来引用当前对象的父类。super 的使用有三种情况：</h5><ul>
+<li>访问父类被隐藏的成员变量，如：super.variable;</li>
+<li>调用父类中被重写的方法，如：super.Method([paramlist]),super()调用父类构造方法;</li>
+<li>调用父类的构造函数，如：super([paramlist]);<h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4></li>
+</ul>
+<p>　　对象的多态性是指在父类中定义的属性或方法被子类继承之后，可以具有不同的数据类型或表现出不同的行为。这使得同一个属性或方法在父类及其各个子类中具有不同的语义。例如：”几何图形”的”绘图”方法，”椭圆”和”多边形”都是”几何图”的子类，其”绘图”方法功能不同。</p>
+<p>　　Java的多态性体现在两个方面：由方法重载实现的静态多态性（编译时多态）和方法重写实现的动态多态性（运行时多态）。</p>
+<ul>
+<li>编译时多态：在编译阶段，具体调用哪个被重载的方法，编译器会根据参数的不同来静态确定调用相应的方法。</li>
+<li><p>运行时多态：由于子类继承了父类所有的属性（私有的除外），所以子类对象可以作为父类对象使用。程序中凡是使用父类对象的地方，都可以用子类对象来代替。一个对象可以通过引用子类的实例来调用子类的方法。</p>
+<h4 id="重载（Overloading）"><a href="#重载（Overloading）" class="headerlink" title="重载（Overloading）"></a>重载（Overloading）</h4></li>
+<li><p>方法重载是让类以统一的方式处理不同数据类型的手段。</p>
+</li>
+<li>一个类中可以创建多个方法，它们具有相同的名字，但具有不同的参数和不同的定义。调用方法时通过传递给它们的不同参数个数和参数类型来决定具体使用哪个方法。</li>
+<li><p>返回值类型可以相同也可以不相同，无法以返回型别作为重载函数的区分标准。</p>
+<h4 id="重写（Overriding）"><a href="#重写（Overriding）" class="headerlink" title="重写（Overriding）"></a>重写（Overriding）</h4></li>
+<li><p>子类对父类的方法进行重新编写。如果在子类中的方法与其父类有相同的的方法名、返回类型和参数表，我们说该方法被重写 (Overriding)。</p>
+</li>
+<li>如需父类中原有的方法，可使用super关键字，该关键字引用了当前类的父类。</li>
+<li>子类函数的访问修饰权限不能低于父类的。</li>
+</ul>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -193,116 +273,74 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/18/Es6新特性/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/29/浅谈Java面向对象/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-yilia配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/11/yilia配置/">yilia配置</a>
-    </h1>
   
-
-        
-        <a href="/2017/04/11/yilia配置/" class="archive-article-date">
-  	<time datetime="2017-04-11T02:41:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>主题配置文件在主目录下的_config.yml，请根据自己需要修改使用。 完整配置例子，可以参考我的博客备份</p>
-<h1 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h1><p>menu:<br>  主页: /<br>  随笔: /tags/随笔/</p>
-<h1 id="SubNav"><a href="#SubNav" class="headerlink" title="SubNav"></a>SubNav</h1><p>subnav:<br>  github: “#”<br>  weibo: “#”<br>  rss: “#”
-        
-          <a class="article-more-a" href="/2017/04/11/yilia配置/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/11/yilia配置/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
+    <a href="/2017/05/26/如何摆脱项目命名困难的尴尬局面面-治愈系/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何摆脱项目命名困难的尴尬局面面_治愈系</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
-    <article id="post-我的第一个博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/08/我的第一个博客/">我的第一个博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/08/我的第一个博客/" class="archive-article-date">
-  	<time datetime="2017-04-08T03:11:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>您好！欢迎来到我的第一个博客！在这里我会展示我的学术论文以及的我的小demo，欢迎您提出宝贵的意见！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/08/我的第一个博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+</nav>
 
 
 
@@ -310,9 +348,10 @@
 
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
   
 
 
@@ -335,8 +374,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
