@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Jade_Wang</title>
+  <title>MongoDB_安装及配置 | Jade_Wang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jade_Wang">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="MongoDB 下载：https://www.mongodb.com/download-center#community MongoDB 安装配置：备注：记得加入环境变量，指定绝对路径，最好是以超级管理员运行cmd1、进入mongodb 下的目录E:\Tool\modb&amp;gt;在目录下新建  db 目录 log 目录  在log 目录下新建mongodb.log 文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB_安装及配置">
+<meta property="og:url" content="http://yoursite.com/2017/06/01/MongoDB-安装及配置/index.html">
 <meta property="og:site_name" content="Jade_Wang">
+<meta property="og:description" content="MongoDB 下载：https://www.mongodb.com/download-center#community MongoDB 安装配置：备注：记得加入环境变量，指定绝对路径，最好是以超级管理员运行cmd1、进入mongodb 下的目录E:\Tool\modb&amp;gt;在目录下新建  db 目录 log 目录  在log 目录下新建mongodb.log 文件">
+<meta property="og:updated_time" content="2017-06-01T15:51:16.195Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jade_Wang">
+<meta name="twitter:title" content="MongoDB_安装及配置">
+<meta name="twitter:description" content="MongoDB 下载：https://www.mongodb.com/download-center#community MongoDB 安装配置：备注：记得加入环境变量，指定绝对路径，最好是以超级管理员运行cmd1、进入mongodb 下的目录E:\Tool\modb&amp;gt;在目录下新建  db 目录 log 目录  在log 目录下新建mongodb.log 文件">
   
     <link rel="alternative" href="/atom.xml" title="Jade_Wang" type="application/atom+xml">
   
@@ -153,160 +157,153 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-MongoDB-安装及配置" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MongoDB_安装及配置
+    </h1>
+  
+
+        
+        <a href="/2017/06/01/MongoDB-安装及配置/" class="archive-article-date">
+  	<time datetime="2017-06-01T15:44:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-01</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>MongoDB 下载：<a href="https://www.mongodb.com/download-center#community" target="_blank" rel="external">https://www.mongodb.com/download-center#community</a></p>
+<h2 id="MongoDB-安装配置："><a href="#MongoDB-安装配置：" class="headerlink" title="MongoDB 安装配置："></a>MongoDB 安装配置：</h2><h4 id="备注：记得加入环境变量，指定绝对路径，最好是以超级管理员运行cmd"><a href="#备注：记得加入环境变量，指定绝对路径，最好是以超级管理员运行cmd" class="headerlink" title="备注：记得加入环境变量，指定绝对路径，最好是以超级管理员运行cmd"></a>备注：记得加入环境变量，指定绝对路径，最好是以超级管理员运行cmd</h4><h3 id="1、进入mongodb-下的目录"><a href="#1、进入mongodb-下的目录" class="headerlink" title="1、进入mongodb 下的目录"></a>1、进入mongodb 下的目录</h3><p>E:\Tool\modb&gt;<br>在目录下新建</p>
+<ul>
+<li>db 目录</li>
+<li>log 目录 </li>
+<li>在log 目录下新建mongodb.log 文件<a id="more"></a></li>
+</ul>
+<h3 id="2、指定日志文件目录"><a href="#2、指定日志文件目录" class="headerlink" title="2、指定日志文件目录"></a>2、指定日志文件目录</h3><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">E:<span class="symbol">\T</span>ool<span class="symbol">\m</span>odb<span class="symbol">\b</span>in&gt;mongod --logpath "E:<span class="symbol">\T</span>ool<span class="symbol">\m</span>odb<span class="symbol">\l</span>og<span class="symbol">\m</span>ongodb.log"指定数据存放目录</div></pre></td></tr></table></figure>
+<h3 id="3、指定数据存放目录"><a href="#3、指定数据存放目录" class="headerlink" title="3、指定数据存放目录"></a>3、指定数据存放目录</h3><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">E:<span class="symbol">\T</span>ool<span class="symbol">\m</span>odb<span class="symbol">\b</span>in&gt;mongod --dbpath "E:<span class="symbol">\T</span>ool<span class="symbol">\m</span>odb<span class="symbol">\d</span>b"</div></pre></td></tr></table></figure>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.583<span class="string">+0800</span> I CONTROL  [initandlisten] MongoDB starting : pid=12244 port=27017 dbpath=E:\Tool\modb\db 64-bit host=JSB015</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.584<span class="string">+0800</span> I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.587<span class="string">+0800</span> I CONTROL  [initandlisten] db version v3.4.3</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.587<span class="string">+0800</span> I CONTROL  [initandlisten] git version: f07437fb5a6cca07c10bafa78365456eb1d6d5e1</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.588<span class="string">+0800</span> I CONTROL  [initandlisten] allocator: tcmalloc</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.589<span class="string">+0800</span> I CONTROL  [initandlisten] modules: none</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.590<span class="string">+0800</span> I CONTROL  [initandlisten] build environment:</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.590<span class="string">+0800</span> I CONTROL  [initandlisten]     distarch: x86_64</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.591<span class="string">+0800</span> I CONTROL  [initandlisten]     target_arch: x86_64</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.592<span class="string">+0800</span> I CONTROL  [initandlisten] options: &#123; storage: &#123; dbPath: "E:\Tool\modb\db" &#125; &#125;</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.600<span class="string">+0800</span> I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3518M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.630<span class="string">+0800</span> I CONTROL  [initandlisten]</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.630<span class="string">+0800</span> I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.631<span class="string">+0800</span> I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:31.632<span class="string">+0800</span> I CONTROL  [initandlisten]</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:32.047<span class="string">+0800</span> I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'E:/Tool/modb/db/diagnostic.data'</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:32.058<span class="string">+0800</span> I INDEX    [initandlisten] build index on: admin.system.version properties: &#123; v: 2, key: &#123; version: 1 &#125;, name: "incompatible_with_version_32", ns: "admin.system.version" &#125;</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:32.058<span class="string">+0800</span> I INDEX    [initandlisten]          building index using bulk method; build may temporarily use up to 500 megabytes of RAM</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:32.061<span class="string">+0800</span> I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:32.063<span class="string">+0800</span> I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:45:32.064<span class="string">+0800</span> I NETWORK  [thread1] waiting for connections on port 27017</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:47:24.020<span class="string">+0800</span> I CONTROL  [thread2] Ctrl-C signal</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:47:24.020<span class="string">+0800</span> I CONTROL  [consoleTerminate] got CTRL_C_EVENT, will terminate after current cmd ends</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:47:24.028<span class="string">+0800</span> I NETWORK  [consoleTerminate] shutdown: going to close listening sockets...</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:47:24.030<span class="string">+0800</span> I NETWORK  [consoleTerminate] closing listening socket: 464</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:47:24.032<span class="string">+0800</span> I NETWORK  [consoleTerminate] shutdown: going to flush diaglog...</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:47:24.034<span class="string">+0800</span> I FTDC     [consoleTerminate] Shutting down full-time diagnostic data capture</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:47:24.043<span class="string">+0800</span> I STORAGE  [consoleTerminate] WiredTigerKVEngine shutting down</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:47:24.164<span class="string">+0800</span> I STORAGE  [consoleTerminate] shutdown: removing fs lock...</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:47:24.165<span class="string">+0800</span> I CONTROL  [consoleTerminate] now exiting</div><div class="line">2017<span class="string">-04</span><span class="string">-09</span>T10:47:24.171<span class="string">+0800</span> I CONTROL  [consoleTerminate] shutting down with code:12</div></pre></td></tr></table></figure>
+<p>4、连接数据库<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">E</span>:\Tool\modb\bin&gt;mongo</div><div class="line">MongoDB shell version v3.<span class="number">4.3</span></div><div class="line">connecting <span class="attribute">to</span>: <span class="attribute">mongodb</span>:<span class="comment">//127.0.0.1:27017</span></div><div class="line"><span class="number">2017</span><span class="attribute">-04-09T10</span>:<span class="number">47</span>:<span class="number">38.944</span>+<span class="number">0800</span> W NETWORK  [thread1] Failed to connect to <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">27017</span> after <span class="number">5000ms</span> milliseconds, giving up.</div><div class="line"><span class="number">2017</span><span class="attribute">-04-09T10</span>:<span class="number">47</span>:<span class="number">38.946</span>+<span class="number">0800</span> E QUERY    [thread1] <span class="attribute">Error</span>: couldn't connect to server <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">27017</span>, connection attempt <span class="attribute">failed </span>:</div><div class="line">connect<span class="variable">@src</span>/mongo/shell/mongo.<span class="attribute">js</span>:<span class="number">237</span>:<span class="number">13</span></div><div class="line">@(connect):<span class="number">1</span>:<span class="number">6</span></div><div class="line"><span class="attribute">exception</span>: connect failed</div></pre></td></tr></table></figure></p>
+<p>5、从新打开一个终端, 安装MongoDB服务<br><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">E:<span class="symbol">\T</span>ool<span class="symbol">\m</span>odb&gt;cd bin</div></pre></td></tr></table></figure></p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">E:<span class="symbol">\T</span>ool<span class="symbol">\m</span>odb<span class="symbol">\b</span>in&gt;mongod --dbpath "E:<span class="symbol">\T</span>ool<span class="symbol">\m</span>odb" --logpath "E:<span class="symbol">\T</span>ool<span class="symbol">\m</span>odb<span class="symbol">\l</span>og<span class="symbol">\m</span>ongodb.log" --install --serviceName "MongoDB"</div><div class="line">2017-04-09T11:01:31.833+0800 I CONTROL  [main] log file "E:<span class="symbol">\T</span>ool<span class="symbol">\m</span>odb<span class="symbol">\l</span>og<span class="symbol">\m</span>ongodb.log" exists; moved to "E:<span class="symbol">\T</span>ool<span class="symbol">\m</span>odb<span class="symbol">\l</span>og<span class="symbol">\m</span>ongodb.log.2017-04-09T03-01-31".</div></pre></td></tr></table></figure>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">E:<span class="symbol">\T</span>ool<span class="symbol">\m</span>odb<span class="symbol">\b</span>in&gt;net start MongoDB</div><div class="line">MongoDB 服务正在启动 .</div><div class="line">MongoDB 服务已经启动成功。</div></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">E:\Tool\modb\bin&gt;mongo</div><div class="line">MongoDB <span class="keyword">shell</span> <span class="keyword">version</span> v3.<span class="number">4.3</span></div><div class="line">connecting <span class="keyword">to</span>: mongod<span class="variable">b:</span>//<span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">27017</span></div><div class="line">MongoDB server <span class="keyword">version</span>: <span class="number">3.4</span>.<span class="number">3</span></div><div class="line">Welcome <span class="keyword">to</span> the MongoDB <span class="keyword">shell</span>.</div><div class="line">For interactive <span class="keyword">help</span>, <span class="built_in">type</span> <span class="string">"help"</span>.</div><div class="line">For more comprehensive documentation, see</div><div class="line">        http://docs.mongodb.org/</div><div class="line">Questions? Try the support group</div><div class="line">        http://groups.google.<span class="keyword">com</span>/group/mongodb-user</div><div class="line">Server <span class="built_in">has</span> startup warning<span class="variable">s:</span></div><div class="line"><span class="number">2017</span>-<span class="number">04</span>-<span class="number">09</span>T11:<span class="number">02</span>:<span class="number">18.826</span>+<span class="number">0800</span> I CONTROL  [initandlisten]</div><div class="line"><span class="number">2017</span>-<span class="number">04</span>-<span class="number">09</span>T11:<span class="number">02</span>:<span class="number">18.826</span>+<span class="number">0800</span> I CONTROL  [initandlisten] ** WARNING: Access control <span class="keyword">is</span> not enabled <span class="keyword">for</span> the database.</div><div class="line"><span class="number">2017</span>-<span class="number">04</span>-<span class="number">09</span>T11:<span class="number">02</span>:<span class="number">18.826</span>+<span class="number">0800</span> I CONTROL  [initandlisten] **          Read <span class="built_in">and</span> <span class="keyword">write</span> access <span class="keyword">to</span> data <span class="built_in">and</span> configuration <span class="keyword">is</span> unrestricted.</div><div class="line"><span class="number">2017</span>-<span class="number">04</span>-<span class="number">09</span>T11:<span class="number">02</span>:<span class="number">18.826</span>+<span class="number">0800</span> I CONTROL  [initandlisten]</div></pre></td></tr></table></figure>
+<p>连接上了———————</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/01/vue-js笔记/" class="archive-article-date">
-  	<time datetime="2017-05-01T03:29:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/01/vue-js笔记/">vue.js笔记</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/01/MongoDB-安装及配置/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/26/项目中的常见问题题-vue-store/" class="archive-article-date">
-  	<time datetime="2017-04-26T02:47:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-26</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/26/项目中的常见问题题-vue-store/">项目中的常见问题题_vue_store</a>
-    </h1>
+  
+    <a href="/2017/06/01/安装及配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">安装及配置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/18/Es6新特性/" class="archive-article-date">
-  	<time datetime="2017-04-18T07:36:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/18/Es6新特性/">Es6新特性</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/11/yilia配置/" class="archive-article-date">
-  	<time datetime="2017-04-11T02:41:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/yilia配置/">yilia配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/04/08/我的第一个博客/" class="archive-article-date">
-  	<time datetime="2017-04-08T03:11:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/08/我的第一个博客/">我的第一个博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -330,8 +327,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
